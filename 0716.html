@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #adafb2;
+        }
+        .container {
+            position: relative; /*부모 = 너의 기준으로 자식들이 정렬할 것이다*/
+            background-color: #fff;
+            width:375px;
+            height:812px;
+            border:1px solid #333;
+            border-radius: 12px;
+            margin: 100px auto 0; /* top left,right bottm */
+            padding:6px 16px; /* top, bottom left,right */
+            display:flex;
+            align-items: flex-end; 
+            justify-content: center; /* 메인측정렬 */
+            flex-direction: row; /* 컬럼일때 세로이고 row일때 가로  */
+            gap:20px;
+        }
+
+        .editBtn {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            translate: -50% 0;
+        }
+
+        .btnTop {
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            background-color: red;
+            color: #fff;
+            width: 60px; 
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btnTop:hover {
+            background-color: dodgerblue;
+        }
+
+        button{
+            background-color: transparent;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="editBtn">도현</button>
+        <button type="button">
+            <img src="./images/icon/home.svg" alt="home">
+        </button>
+        <button type="button">
+            <img src="./images/icon/calendar.svg" alt="calendar">
+        </button>
+        <button type="button">
+            <img src="./images/icon/setting.svg" alt="setting">
+        </button>
+    </div>
+    
+    <a href="#" class="btnTop">TOP</a>
+</body>
+</html>
